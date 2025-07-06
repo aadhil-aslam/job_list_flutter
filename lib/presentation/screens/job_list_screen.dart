@@ -60,9 +60,33 @@ class JobListScreen extends StatelessWidget {
                   },
                   );
                 } else if (state is JobListError) {
-                  return Center(child: Text(state.message));
+                  return Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Failed to load jobs.',
+                          style: TextStyle(color: Colors.red),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          state.message,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                        SizedBox(height: 20),
+                        ElevatedButton(
+                          onPressed: () {
+                            context.read<JobListBloc>().add(FetchJobsEvent());
+                          },
+                          child: Text('Retry'),
+                        ),
+                      ],
+                    ),
+                  );
+                } else {
+                  return Container(); // Default fallback
                 }
-                return Container();
               },
             ),
           )

@@ -18,7 +18,7 @@ class JobServices{
       List<dynamic> jobList = json.decode(response.body);
       return jobList.map((jobData) => Job.fromJson(jobData)).toList();
     } else {
-      throw Exception('Failed to load jobs');
+      throw Exception('Failed to load jobs: ${response.statusCode}');
     }
   }
 }
