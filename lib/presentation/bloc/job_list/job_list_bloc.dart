@@ -15,7 +15,6 @@ class JobListBloc extends Bloc<JobListEvent, JobListState> {
     emit(JobListLoading());
     try {
       final jobs = await jobServices.fetchJobs();
-      // print(jobs);
       emit(JobListLoaded(jobs));
     } catch (e) {
       emit(JobListError(e.toString()));

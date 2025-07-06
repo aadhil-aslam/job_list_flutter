@@ -9,8 +9,6 @@ class JobServices{
   JobServices(this.client);
 
   Future<List<Job>> fetchJobs() async {
-    print('#######');
-
     final response = await client.get(Uri.parse('https://6868ca64d5933161d70c7025.mockapi.io/api/jobs'));
 
     print(response.body);
