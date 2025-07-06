@@ -13,17 +13,17 @@ class JobListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Jobs'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.favorite),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const FavoriteJobsScreen()),
-              );
-            },
-          ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     icon: const Icon(Icons.favorite),
+        //     onPressed: () {
+        //       Navigator.push(
+        //         context,
+        //         MaterialPageRoute(builder: (_) => const FavoriteJobsScreen()),
+        //       );
+        //     },
+        //   ),
+        // ],
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: Column(
