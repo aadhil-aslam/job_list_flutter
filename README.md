@@ -21,10 +21,10 @@ Build the app for production:
 
 ### Architecture Overview
 
-- data/ – handles API calls and data models.
+- data/ – data models.
 - presentation/ – contains the screens and UI widgets.
 - blocs/ – handles the logic (like fetching jobs, managing favorites).
-- repositories/ – talks to the API and sends data to the app.
+- services/ – handles API calls.
 
 ---
 
