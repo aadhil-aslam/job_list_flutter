@@ -3,7 +3,9 @@ import 'job_list_screen.dart';
 import 'favorite_jobs_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final VoidCallback onToggleTheme;
+
+  const HomeScreen({super.key, required this.onToggleTheme});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -25,7 +27,24 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    
     return Scaffold(
+      appBar: AppBar(
+        title: Text(_selectedIndex == 0 ? 'Jobs' : 'Favorite Jobs',),
+        
+        actions: [
+          IconButton(
+            icon: Icon(isDarkMode ? Icons.nightlight_round : Icons.wb_sunny),
+            onPressed: widget.onToggleTheme,
+          ),
+          // IconButton(
+          //   icon: const Icon(Icons.brightness_6),
+          //   onPressed: widget.onToggleTheme,
+          // ),
+        ],
+        backgroundColor: Colors.lightBlueAccent,
+      ),
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,

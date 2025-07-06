@@ -12,10 +12,10 @@ class FavoriteJobsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Favorite Jobs"),
-        backgroundColor: Colors.lightBlueAccent,
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Favorite Jobs"),
+      //   backgroundColor: Colors.lightBlueAccent,
+      // ),
       body: BlocBuilder<FavoriteJobsBloc, FavoriteJobsState>(
         builder: (context, favState) {
           if (favState is! FavoriteJobsLoaded) return const SizedBox.shrink();
