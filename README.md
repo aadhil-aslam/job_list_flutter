@@ -34,5 +34,7 @@ This app uses BLoC (Business Logic Component) to manage app state.
 - JobListBloc - fetches jobs from the API (https://mockapi.io/)
 - FavoriteJobsBloc - saves and shows favorite jobs using SharedPreferences.
 
+---
+
 #### Time Taken
 I finished this project in about 4 hours.
