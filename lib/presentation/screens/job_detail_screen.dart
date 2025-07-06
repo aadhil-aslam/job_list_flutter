@@ -122,7 +122,24 @@ class JobDetailScreen extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Text('Apply'),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  backgroundColor: Colors.lightBlueAccent,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    'Apply',
+                    style: TextStyle(
+                      // color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                // child: const Text('Apply'),
               )),
           ],
         ),
