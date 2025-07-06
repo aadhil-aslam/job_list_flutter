@@ -1,4 +1,4 @@
-# Job Listing App.
+# Job Listing App
 
 This is the Flutter based Job Listing Mobile App.
 
